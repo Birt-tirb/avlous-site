@@ -32,6 +32,7 @@
   input:focus { outline:3px solid rgba(194,109,75,.24); border-color:var(--clay); }
   .consent { display:flex; align-items:flex-start; gap:10px; color:var(--bark-soft); font-size:.92rem; margin:24px 0; }
   .consent input { width:18px; height:18px; margin:3px 0 0; accent-color:var(--clay); flex:0 0 auto; }
+  .honeypot { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
   button { appearance:none; border:0; border-radius:8px; background:var(--clay); color:#fff; cursor:pointer; font:inherit; font-weight:600; min-height:48px; padding:12px 22px; }
   button:hover { background:var(--clay-dark); }
   .quiet { color:var(--bark-soft); font-size:.86rem; margin:18px 0 0; }
@@ -58,8 +59,11 @@
   <form class="form-panel" id="notify-form" action="https://formsubmit.co/support@avlous.co.uk" method="POST">
     <input type="hidden" id="form-subject" name="_subject" value="New Avlous Fasting launch notification signup">
     <input type="hidden" id="form-next" name="_next" value="https://avlous.co.uk/fasting-notify.html?app=fasting&amp;submitted=true">
-    <input type="hidden" name="_captcha" value="false">
     <input type="hidden" id="form-source" name="source" value="Avlous Fasting launch notification page">
+    <div class="honeypot" aria-hidden="true">
+      <label for="website">Leave this field empty</label>
+      <input id="website" name="_honey" type="text" tabindex="-1" autocomplete="off">
+    </div>
     <div class="field">
       <label for="name">First name <span class="optional">Optional</span></label>
       <input id="name" name="name" type="text" autocomplete="given-name">
