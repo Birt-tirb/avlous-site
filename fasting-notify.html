@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get notified | Avlous Fasting</title>
+<meta name="description" content="Join the Avlous Fasting launch notification list.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --cream:#faf6ee; --sand:#f0e7d8; --clay:#c26d4b; --clay-dark:#a85838; --sage-dark:#5f6e54; --bark:#3d2f24; --bark-soft:#6b5d50; --card:#fffdf8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Inter',-apple-system,sans-serif; background:var(--cream); color:var(--bark); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2 { font-family:'Fraunces',Georgia,serif; font-weight:500; line-height:1.15; }
+  a { color:var(--clay-dark); }
+  nav { border-bottom:1px solid rgba(61,47,36,.08); background:rgba(250,246,238,.94); }
+  .nav-inner,.wrap { max-width:760px; margin:0 auto; padding-left:24px; padding-right:24px; }
+  .nav-inner { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+  .logo { font-family:'Fraunces',Georgia,serif; font-size:1.4rem; font-weight:600; color:var(--bark); text-decoration:none; }
+  .back { font-size:.92rem; text-decoration:none; }
+  main { padding:72px 0 88px; }
+  .eyebrow { color:var(--sage-dark); font-size:.78rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase; }
+  h1 { font-size:clamp(2.25rem,7vw,3.5rem); margin:12px 0 14px; }
+  .lede { color:var(--bark-soft); font-size:1.08rem; max-width:580px; margin:0 0 34px; }
+  .form-panel { background:var(--card); border:1px solid rgba(61,47,36,.08); border-radius:16px; padding:30px; box-shadow:0 2px 14px rgba(61,47,36,.05); }
+  .field { margin-top:20px; }
+  label { display:block; font-weight:600; margin-bottom:7px; }
+  .optional { color:var(--bark-soft); font-size:.88rem; font-weight:400; }
+  input[type="text"], input[type="email"] { width:100%; min-height:48px; border:1px solid rgba(61,47,36,.24); border-radius:8px; background:#fff; color:var(--bark); font:inherit; padding:11px 13px; }
+  input:focus { outline:3px solid rgba(194,109,75,.24); border-color:var(--clay); }
+  .consent { display:flex; align-items:flex-start; gap:10px; color:var(--bark-soft); font-size:.92rem; margin:24px 0; }
+  .consent input { width:18px; height:18px; margin:3px 0 0; accent-color:var(--clay); flex:0 0 auto; }
+  button { appearance:none; border:0; border-radius:8px; background:var(--clay); color:#fff; cursor:pointer; font:inherit; font-weight:600; min-height:48px; padding:12px 22px; }
+  button:hover { background:var(--clay-dark); }
+  .quiet { color:var(--bark-soft); font-size:.86rem; margin:18px 0 0; }
+  .success { background:var(--sand); border-left:5px solid var(--sage-dark); border-radius:10px; padding:24px; }
+  .success h2 { margin:0 0 8px; font-size:1.5rem; }
+  .success p { color:var(--bark-soft); margin:0; }
+  [hidden] { display:none; }
+  footer { border-top:1px solid rgba(61,47,36,.1); padding:28px 0; color:var(--bark-soft); font-size:.88rem; }
+  @media (max-width:520px) { main { padding-top:52px; } .form-panel { padding:24px 20px; } }
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a class="logo" href="index.html">Avlous</a><a class="back" href="index.html#apps">Back to apps</a></div></nav>
+<main class="wrap">
+  <span class="eyebrow">Avlous Fasting</span>
+  <h1>Get notified when it is ready.</h1>
+  <p class="lede">Leave your email and we will let you know when Avlous Fasting is available. No pressure and no regular marketing emails.</p>
+
+  <div class="success" id="success-message" hidden>
+    <h2>You are on the list.</h2>
+    <p>Thank you. We will be in touch when Avlous Fasting is ready to share.</p>
+  </div>
+
+  <form class="form-panel" id="notify-form" action="https://formsubmit.co/support@avlous.co.uk" method="POST">
+    <input type="hidden" name="_subject" value="New Avlous Fasting launch notification signup">
+    <input type="hidden" name="_next" value="https://avlous.co.uk/fasting-notify.html?submitted=true">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="source" value="Avlous Fasting launch notification page">
+    <div class="field">
+      <label for="name">First name <span class="optional">Optional</span></label>
+      <input id="name" name="name" type="text" autocomplete="given-name">
+    </div>
+    <div class="field">
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <label class="consent" for="consent">
+      <input id="consent" name="consent" type="checkbox" required>
+      <span>I am happy for Avlous to use my email to tell me when Avlous Fasting launches. I can ask to be removed at any time.</span>
+    </label>
+    <button type="submit">Get notified</button>
+    <p class="quiet">Read the <a href="fasting-privacy.html">Privacy Policy</a>. We will only use these details for the launch notification.</p>
+  </form>
+</main>
+<footer><div class="wrap">© 2026 Avlous. All rights reserved. · <a href="fasting-privacy.html">Privacy Policy</a></div></footer>
+<script>
+  if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
+    document.getElementById('notify-form').hidden = true;
+    document.getElementById('success-message').hidden = false;
+  }
+</script>
+</body>
+</html>
